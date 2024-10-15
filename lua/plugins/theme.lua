@@ -3,6 +3,17 @@ return {
     "junegunn/seoul256.vim",
   },
 
+  {
+    "projekt0n/github-nvim-theme",
+    config = function()
+      require("github-theme").setup({
+        options = {
+          transparent = true,
+        },
+      })
+    end,
+  },
+
   -- add tokyonight
   {
     "folke/tokyonight.nvim",
@@ -32,7 +43,7 @@ return {
     "AlexvZyl/nordic.nvim",
     name = "nordic",
     opts = {
-      transparent_bg = true,
+      transparent = true,
     },
   },
 
@@ -40,18 +51,18 @@ return {
     "sainnhe/gruvbox-material",
     name = "gruvbox-material",
     opts = {
-      -- transparent = true,
-      -- styles = {
-      --   sidebars = "transparent",
-      --   float = "transparent",
-      -- },
+      transparent = true,
+      styles = {
+        sidebars = "transparent",
+        float = "transparent",
+      },
     },
   },
 
   {
     "catppuccin/nvim",
     lazy = false,
-    name = "catppuccin",
+    name = "catppuccin-mocha",
     config = function()
       require("catppuccin").setup({
         transparent_background = true,
@@ -123,9 +134,15 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      -- colorscheme = "catppuccin",
-      colorscheme = "kanagawa",
+      colorscheme = "catppuccin-mocha",
+      -- colorscheme = "kanagawa",
+      -- colorscheme = "kanagawa-wave",
+      -- colorscheme = "rose-pine",
+      -- colorscheme = "github_dark_dimmed",
+      -- colorscheme = "rose-pine-moon",
       -- colorscheme = "gruvbox-material",
+      -- colorscheme = "github_dark",
+      -- colorscheme = "tokyonight",
       -- colorscheme = "nordic",
     },
   },
